@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manager Actions</title>
+</head>
+<body>
+
+<h1>Add Tenant</h1>
+<form action="ManagerServlet" method="post">
+    <input type="hidden" name="action" value="addTenant">
+    Name: <input type="text" name="name" required><br>
+    Phone Number: <input type="text" name="phoneNumber" required><br>
+    Email: <input type="email" name="email" required><br>
+    Check-in Date: <input type="date" name="checkInDate" required><br>
+    Check-out Date: <input type="date" name="checkOutDate" required><br>
+    Apartment Number: <input type="text" name="apartmentNumber" required><br>
+    <input type="submit" value="Add Tenant">
+</form>
+
+<h1>Move Tenant</h1>
+<form action="ManagerServlet" method="post">
+    <input type="hidden" name="action" value="moveTenant">
+    Tenant ID: <input type="text" name="tenantId" required><br>
+    New Apartment Number: <input type="text" name="newApartmentNumber" required><br>
+    <input type="submit" value="Move Tenant">
+</form>
+
+<h1>Delete Tenant</h1>
+<form action="ManagerServlet" method="post">
+    <input type="hidden" name="action" value="deleteTenant">
+    Tenant ID: <input type="text" name="tenantId" required><br>
+    <input type="submit" value="Delete Tenant">
+</form>
+
+</body>
+</html>

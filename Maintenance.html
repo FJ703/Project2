@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maintenance Staff Actions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        h2 {
+            color: #2c3e50;
+        }
+        form {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #bdc3c7;
+            border-radius: 5px;
+            background-color: #ecf0f1;
+        }
+        input[type="text"], input[type="date"], select {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #bdc3c7;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        input[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Browse Maintenance Requests</h2>
+<form action="BrowseRequestsServlet" method="get">
+    Apartment Number: <input type="text" name="apartmentNumber"><br>
+    Area: <input type="text" name="area"><br>
+    Status: <input type="text" name="status"><br>
+    Date From: <input type="date" name="dateFrom"><br>
+    Date To: <input type="date" name="dateTo"><br>
+    <input type="submit" value="Filter Requests">
+</form>
+
+<h2>Update Request Status</h2>
+<form action="UpdateRequestStatusServlet" method="post">
+    Request ID: <input type="text" name="requestId" required><br>
+    New Status: 
+    <select name="status">
+        <option value="completed">Completed</option>
+        <option value="pending">Pending</option>
+    </select><br>
+    <input type="submit" value="Update Status">
+</form>
+
+</body>
+</html>

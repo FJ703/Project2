@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Maintenance Request</title>
+</head>
+<body>
+    <h1><center>Maintenance Request Form</center></h1>
+    <form action="SubmitRequestServlet" method="post" enctype="multipart/form-data">
+        <label for="apartmentNumber">Apartment Number:</label>
+        <input type="text" id="apartmentNumber" name="apartmentNumber" required><br><br>
+        
+        <label for="areaOfProblem">Area of Problem:</label>
+        <select id="areaOfProblem" name="areaOfProblem" required>
+            <option value="Kitchen">Kitchen</option>
+            <option value="Bathroom">Bathroom</option>
+            <option value = "Bedroom">Bedroom</option>
+            <option value = "Balcony" >Balcony</option>
+        </select><br><br>
+        
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" required></textarea><br><br>
+        
+        <label for="photo">Upload Photo (optional):</label>
+        <input type="file" id="photo" name="photo"><br><br>
+        
+        <button type="submit">Submit Request</button>
+    </form>
+</body>
+</html>
